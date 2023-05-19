@@ -5,11 +5,11 @@ import CountContext from "./countContext";
 function CounterReadOnly() {
   const [num, setNum] = useState(0);
   function up(evt) {
-    setNum(oldNum => oldNum + 1);
+    setNum((oldNum) => oldNum + 1);
   }
 
   return (
-    <CountContext.Provider value={num}>
+    <CountContext.Provider value={{ num, up }}>
       <button onClick={up}>+1 (from parent)</button>
       <Child />
     </CountContext.Provider>

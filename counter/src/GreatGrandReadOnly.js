@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import CountContext from "./countContext";
 
 function GreatGrandReadOnly() {
-  const num = useContext(CountContext);
+  const { num } = useContext(CountContext);
 
   return (
     <div style={{ border: "2px solid #7FDBFF", margin: "1rem" }}>

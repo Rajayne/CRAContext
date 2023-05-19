@@ -7,7 +7,7 @@ function Grandchild() {
     <div style={{ border: "2px solid #39CCCC", margin: "1rem" }}>
       <p>I'm the grandchild!</p>
       <GreatGrandReadOnly />
-      {/* <GreatGrandReadWrite /> */}
+      <GreatGrandReadWrite />
     </div>
   );
 }
