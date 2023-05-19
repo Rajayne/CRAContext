@@ -1,0 +1,15 @@
+.Navbar {
+    display: block;
+    padding: 1rem;
+}
+
+.Navbar-title {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.Navbar-button {
+    border-radius: 2px;
+    border: none;
+    background-color: aliceblue;
+}

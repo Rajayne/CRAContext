@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import ThemeContext from "./ThemeContext";
 
 const ThemeProvider = ({ children }) => {
-  const [themeColor, setThemeColor] = useState("purple");
-  const toggleTheme = () => {
-    setThemeColor((color) => (color === "purple" ? "teal" : "purple"));
+  const [color, setColor] = useState("purple");
+  const toggleColor = () => {
+    setColor((color) => (color === "purple" ? "teal" : "purple"));
   };
   return (
-    <ThemeContext.Provider value={themeColor}>
-      <button onClick={toggleTheme}>Toggle Theme</button>
+    <ThemeContext.Provider value={{ color, toggleColor }}>
       {children}
     </ThemeContext.Provider>
   );

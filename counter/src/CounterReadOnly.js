@@ -10,7 +10,7 @@ function CounterReadOnly() {
 
   return (
     <CountContext.Provider value={{ num, up }}>
-      <button onClick={up}>+1 (from parent)</button>
+      <button onClick={up}>Add +1 to Count</button>
       <Child />
     </CountContext.Provider>
   );

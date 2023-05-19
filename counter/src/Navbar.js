@@ -1,11 +1,17 @@
 import React, { useContext } from "react";
 import ThemeContext from "./ThemeContext";
+import "./Navbar.css";
 
 const Navbar = () => {
-  const backgroundColor = useContext(ThemeContext);
+  const { color, toggleColor } = useContext(ThemeContext);
   return (
-    <nav style={{ backgroundColor }}>
-      <span>WEBSITE</span>
+    <nav className="Navbar" style={{ backgroundColor: color }}>
+      <div className="Navbar-title">
+        <span>WEBSITE</span>
+      </div>
+      <button className="Navbar-button" onClick={toggleColor}>
+        Toggle Theme
+      </button>
     </nav>
   );
 };
