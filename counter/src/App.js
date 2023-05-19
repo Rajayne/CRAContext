@@ -1,18 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import CounterReadOnly from "./CounterReadOnly";
-import ThemeContext from "./ThemeContext";
+import ThemeProvider from "./ThemeProvider";
+import Navbar from "./Navbar";
+import "./App.css";
 
 function App() {
-  const [themeColor, setThemeColor] = useState("purple");
-  const toggleTheme = () => {
-    setThemeColor((color) => (color === "purple" ? "teal" : "purple"));
-  };
   return (
-    <div>
-      <ThemeContext.Provider value={themeColor}>
-        <button onClick={toggleTheme}>Toggle Theme</button>
+    <div className="App">
+      <ThemeProvider>
+        <Navbar />
         <CounterReadOnly />
-      </ThemeContext.Provider>
+      </ThemeProvider>
     </div>
   );
 }
